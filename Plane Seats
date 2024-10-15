@@ -1,0 +1,30 @@
+
+//hw part 2
+
+#include <iostream>
+using namespace std;
+
+// fxn to Print seat chart for r rows and c columns each.
+void PrintSeatChart(int r, int c)
+{
+    for (int i = 0; i < r; i++)
+    {
+        for (int j = 0; j < c; j++)
+        {
+            cout << i + 1 << (char)(j + 'A') << " ";// j+'A' =j+65 lets say j=0 so 0+65 
+        }                                          // 65 is ascii of A similary 66,67->B,C
+        cout << "\n";                   // basically j+'A' is typecast to char.
+    }
+}
+
+int main()
+{
+    int rows = 7;
+    int columns = 4;
+    cout << "How Many Roles in the Plane? ";
+    cin >> rows;
+    cout << "How Many Columns in the Plane? ";
+    cin >> columns;
+    PrintSeatChart(rows, columns);
+    return 0;
+}
